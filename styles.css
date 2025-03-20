@@ -1,37 +1,50 @@
-body {
-  font-family: Arial, sans-serif;
+<!-- ᴗ̈ valberg.sorria s -->
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 20px;
+header .logo img {
+  width: 100px; 
+  height: auto;
 }
 
-input[type="text"] {
-  width: 50%;
-  padding: 10px;
+header input[type="text"] {
+  padding: 5px 10px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #f00;
+header button {
+  padding: 5px 10px;
+  background-color: #ff0000;
   color: #fff;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #cc0000;
 }
 
 main {
@@ -39,29 +52,98 @@ main {
   padding: 20px;
 }
 
+/* Vídeo principal */
 .video-container {
-  flex: 3;
+  flex: 2;
   margin-right: 20px;
 }
 
 .video-container img {
   width: 100%;
   height: auto;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-container img:hover {
+  transform: scale(1.02);
 }
 
 .video-container h2 {
   margin-top: 10px;
+  font-size: 20px;
 }
 
 .video-container p {
-  margin: 5px 0;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.video-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.video-container button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
 }
 
 .stats {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
 }
 
+.stats span {
+  margin-right: 10px;
+}
+
+.like-dislike {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.like-dislike button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.like-dislike button:hover {
+  color: #000;
+}
+
+.like-dislike .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.like-dislike .like-btn {
+  color: #007bff; 
+}
+
+.like-dislike .dislike-btn {
+  color: #e74c3c; 
+}
 aside {
   flex: 1;
 }
@@ -73,22 +155,23 @@ aside {
 
 .related-video img {
   width: 120px;
-  height: 90px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-right: 10px;
+  transition: transform 0.3s ease;
 }
 
-.video-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.related-video img:hover {
+  transform: scale(1.05);
 }
 
 .video-details h3 {
-  font-size: 14px;
-  margin: 0;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .video-details p {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
 }
